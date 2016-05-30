@@ -1,0 +1,37 @@
+{
+  "name": "webpack-react-node",
+  "version": "1.0.0",
+  "description": "使用webpack、nodejs、react、es6搭建都一个webapp项目",
+  "main": "app.js",
+  "scripts": {
+    "test": "start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmcfeng/webpack-react-nodes.git"
+  },
+  "keywords": [
+    "webpack",
+    "react",
+    "nodejs",
+    "es6"
+  ],
+  "author": "mmcfeng",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mmcfeng/webpack-react-nodes/issues"
+  },
+  "homepage": "https://github.com/mmcfeng/webpack-react-nodes#readme",
+  "devDependencies": {
+    "babel-core": "^6.9.1",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "express": "^4.13.4",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.9.1",
+    "jquery": "^2.2.4"
+  }
+}
