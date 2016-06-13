@@ -1,10 +1,17 @@
 const webpack = require('webpack');
+const path = require('path');
+const PATHS = {
+  app: path.join(__dirname, 'app'),
+  build: path.join(__dirname, 'build')
+};
 
 module.exports = {
-     entry: './app/app.js',
+     entry: {
+       app : PATHS.app
+     },
      output: {
-         path: './build',
-         filename: 'app.min.js',
+      path: PATHS.build,
+      filename: 'app.min.js',
      },
      module: {
          loaders: [{
@@ -18,6 +25,9 @@ module.exports = {
         },{
             test: /\.css$/,
             loader: "style!css"
+        },{
+            test:/\.html/,
+            loader:'html'
         }]
      },
      plugins: [
