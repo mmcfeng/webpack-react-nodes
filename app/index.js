@@ -1,5 +1,9 @@
-import $ from 'jquery';
-import Button from './components/Button.js';
+import TodoList from './components/TodoList/TodoList.js';
+import React from 'react';
+import ReactDOM from 'react-dom'
 
-const button = new Button();
-button.render('a');
+console.log(React);
+ReactDOM.render(
+	<TodoList />,
+	document.getElementById('appId')
+);
