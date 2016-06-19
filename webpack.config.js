@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const merge = require('webpack-merge');
 const path = require('path');
 const TARGET = process.env.npm_lifecycle_event;
+process.env.BABEL_ENV = TARGET;
 const PATHS = {
   app: path.join(__dirname, 'app'),
   build: path.join(__dirname, 'build')
@@ -15,14 +16,15 @@ const common = {
     path : PATHS.build,
     filename : 'app.min.js'
   },
+  resolve: { extensions: ['', '.js', '.jsx'] }, 
   module : {
       loaders: [{
         test: /\.js$/,
-        exclude: /node_modules/,
+        include: PATHS.app,
         loader: 'babel-loader',
       },{
         test: /\.jsx?$/,
-        exclude: /node_modules/,
+        include: PATHS.app,
         loader: 'babel',
       },{
         test: /\.css$/,
