@@ -41,6 +41,7 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.9.1",
+    "bootstrap": "^3.3.7",
     "jquery": "^2.2.4",
     "mustache": "^2.2.1",
     "node-uuid": "^1.4.7"
