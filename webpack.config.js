@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const merge = require('webpack-merge');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const path = require('path');
 const TARGET = process.env.npm_lifecycle_event;
 process.env.BABEL_ENV = TARGET;
@@ -28,14 +29,14 @@ const common = {
         loader: 'babel',
       },{
         test: /\.css$/,
-        loader: "style!css"
+        loader:  ExtractTextPlugin.extract("style-loader","css-loader")
       },{
         test:/\.html/,
         loader:'html'
       }]
     },
     plugins : [
-      
+      new ExtractTextPlugin("styles.css"), 
     ]
 }
 
